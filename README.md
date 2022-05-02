@@ -1,2 +1,1 @@
-# vgf-db
-database of foods in video games.
+# heroku-app-new
