@@ -2,12 +2,12 @@ const { Food } = require('../models');
 
 const foodData = [
   {
-    game_name: 'Shirts',
+    game_name: 'Legend of Zelda: Breath of the wild',
     dish_type: '',
     dish_name: '',
   },
   {
-    game_name: 'Shirts',
+    game_name: 'Fallout Series',
     dish_type: '',
     dish_name: '',
   },
