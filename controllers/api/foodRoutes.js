@@ -1,36 +1,29 @@
 const router = require("express").Router();
-const Student = require("../../models/students");
+const Food = require("../../models/Food");
 
-// GET all students
-// router.get("/", async (req, res) => {
-//   try {
-//     const studentData = await Student.findAll({});
-//     // console.log(studentData);
-//     const plainStuData = studentData.map((stu) => stu.get({ plain: true }));
-//     res.render("homepage", { students: plainStuData });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
-// router.post("/", async (req, res) => {
-//   try {
-//     const studentData = await Student.create({
-//       studentname: req.body.s_name,
-//       email: req.body.s_email,
-//     });
-//     res.status(200).json(studentData);
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-// });
-
-router.post('/test', asynch (req, res) => {
+// GET all foods
+router.get("/", async (req, res) => {
   try {
-    const test = "hello world";
-
+    const foodData = awafood.findAll({});
+    // console.log(studentData);
+    const plainFoodData = foodData.map((food) => food.get({ plain: true }));
+    res.render("homepage", { Food: foodData });
+  } catch (err) {
+    res.status(500).json(err);
   }
-  
-})
+});
+
+router.post("/", async (req, res) => {
+  try {
+    const foodData = await Food.create({
+      dish_name: req.body.dish_name,
+      dish_game: req.body.dish_game,
+      dish_type: req.dish_type,
+    });
+    res.status(200).json(foodData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 
 module.exports = router;
