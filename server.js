@@ -25,8 +25,3 @@ sequelize.sync({ force: false }).then(() => {
 });
 
 router.get("/", async (req, res) => {});
-
-Handlebars.registerHelper("list", function (items, options) {
-  const itemsAsHtml = items.map((item) => "<h1>Hello world</h1>");
-  return itemsAsHtml.join("\n");
-});
