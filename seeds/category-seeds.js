@@ -34,6 +34,13 @@ const categoryData = [
   {
     category_name: 'Wine',
   },
+  {
+    category_name: 'Beer',
+  },
+  {
+    category_name: 'Liquor',
+  },
+  
 ];
 
 const seedCategories = () => Category.bulkCreate(categoryData);
