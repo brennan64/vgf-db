@@ -6,8 +6,9 @@ router.get("/", async (req, res) => {
   const foodData = await Food.findAll().catch((err) => {
     res.json(err);
   });
-  const foodss = foodData.map((dish) => dish.get({ plain: true }));
-  res.render("all", { foods });
+  // console.log(foodData);
+  const foods = foodData.map((dish) => dish.get({ plain: true }));
+  res.render("homepage", { foods });
 });
 
 // router.post("/", async (req, res) => {
