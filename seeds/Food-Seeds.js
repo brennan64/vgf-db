@@ -3,7 +3,7 @@ const { Food } = require('../models');
 const foodData = [
   {
     game_name: 'Legend of Zelda: Breath of the wild',
-    dish_type: '',
+    category_id: '',
     dish_name: 'Akkala Buns',
   },
   {
@@ -37,6 +37,6 @@ const foodData = [
 },
 ];
 
-const Food = () => Category.bulkCreate(foodData);
+const foodSeed = () => Category.bulkCreate(foodData);
 
-module.exports = Food;
+module.exports = foodSeed;
