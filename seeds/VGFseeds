@@ -1,0 +1,33 @@
+const { Food } = require('../models');
+
+const foodData = [
+  {
+    game_name: 'Shirts',
+    dish_type: '',
+    dish_name: '',
+  },
+  {
+    game_name: 'Shirts',
+    dish_type: '',
+    dish_name: '',
+  },
+  {
+    game_name: 'Shirts',
+    dish_type: '',
+    dish_name: '',
+  },
+  {
+    game_name: 'Shirts',
+    dish_type: '',
+    dish_name: '',
+  },
+  {
+    game_name: 'Shirts',
+    dish_type: '',
+    dish_name: '',
+  },
+];
+
+const Food = () => Category.bulkCreate(foodData);
+
+module.exports = Food;
