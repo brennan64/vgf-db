@@ -5,7 +5,6 @@ const Food = require("../../models/Food");
 router.get("/", async (req, res) => {
   try {
     const foodData = awafood.findAll({});
-    // console.log(studentData);
     const plainFoodData = foodData.map((food) => food.get({ plain: true }));
     res.render("homepage", { Food: foodData });
   } catch (err) {
