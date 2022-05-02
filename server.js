@@ -3,6 +3,7 @@ const path = require("path");
 const routes = require("./controllers");
 const exphbs = require("express-handlebars");
 const sequelize = require("./config/connections");
+const router = require("./controllers");
 
 const PORT = process.env.PORT || 3001;
 
@@ -21,4 +22,11 @@ app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
+});
+
+router.get("/", async (req, res) => {});
+
+Handlebars.registerHelper("list", function (items, options) {
+  const itemsAsHtml = items.map((item) => "<h1>Hello world</h1>");
+  return itemsAsHtml.join("\n");
 });
