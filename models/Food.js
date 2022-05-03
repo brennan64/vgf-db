@@ -32,28 +32,14 @@ Food.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-<<<<<<< HEAD
         isAlpha: true,
+        references: {
+          model: "category",
+          key: "id",
+        },
+        onDelete: "CASCADE",
       },
     },
-    category_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "category",
-        key: "id",
-      },
-      onDelete: "CASCADE",
-    },
-=======
-          isAlpha: true,
-          references: {
-            model: 'category',
-            key: 'id',
-          },
-          onDelete: 'CASCADE'
-      },
-    },
->>>>>>> 02baca369650c5503be15d36ed7d03778a786876
   },
   {
     sequelize,
