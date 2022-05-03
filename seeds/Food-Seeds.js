@@ -382,6 +382,6 @@ const foodData = [
 },
 ];
 
-const foodSeed = () => Category.bulkCreate(foodData);
+const foodSeed = () => Food.bulkCreate(foodData);
 
 module.exports = foodSeed;
