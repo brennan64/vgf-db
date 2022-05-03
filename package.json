@@ -6,6 +6,7 @@
     "dotenv": "^16.0.0",
     "express": "^4.18.1",
     "express-handlebars": "^6.0.5",
+    "login-plus": "^1.6.2",
     "mysql2": "^2.3.3",
     "sequelize": "^6.19.0"
   }

@@ -32,6 +32,7 @@ Food.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
+<<<<<<< HEAD
         isAlpha: true,
       },
     },
@@ -43,6 +44,16 @@ Food.init(
       },
       onDelete: "CASCADE",
     },
+=======
+          isAlpha: true,
+          references: {
+            model: 'category',
+            key: 'id',
+          },
+          onDelete: 'CASCADE'
+      },
+    },
+>>>>>>> 02baca369650c5503be15d36ed7d03778a786876
   },
   {
     sequelize,
