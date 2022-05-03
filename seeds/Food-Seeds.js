@@ -19,7 +19,7 @@ const foodData = [
   {
     game_name: 'Witcher III',
     dish_type: 'Drink, Wine',
-    dish_name: 'Guillaume du Bois’ Soulful Wine',
+    dish_name: "Guillaume du Bois' Soulful Wine",
   },
   {
     game_name: 'Witcher III',
@@ -64,7 +64,7 @@ const foodData = [
   {
     game_name: 'Witcher III',
     dish_type: 'Drink, Liquor',
-    dish_name: 'Victor Monnart’s Cognac',
+    dish_name: "Victor Monnart's Cognac",
   },
   {
     game_name: 'Legends of Zelda Oracle of Seasons',
