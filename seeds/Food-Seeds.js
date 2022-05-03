@@ -1,4 +1,5 @@
 const { Food } = require('../models');
+const { DataTypes } = require('sequelize');
 
 const foodData = [
   {
