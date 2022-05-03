@@ -4,11 +4,6 @@ const foodData = [
   {
     game_name: 'Witcher III',
     dish_type: 'Drink, Wine',
-    dish_name: 'Chateau d’Adam Chevalier Pinot Blanc Reserve',
-  },
-  {
-    game_name: 'Witcher III',
-    dish_type: 'Drink, Wine',
     dish_name: 'Chateau de Conrad Cabernet',
   },
   {
