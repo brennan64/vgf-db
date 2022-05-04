@@ -15,7 +15,6 @@ Food.init(
     dish_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
       validate: {
         len: [3, 35],
         isAlpha: true,

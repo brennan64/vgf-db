@@ -1,13 +1,21 @@
 const router = require("express").Router();
-const Category = require("../../models/category");
+const { Category, Food } = require("../../models");
 
 // GET all foods
 router.get("/", async (req, res) => {
-  const categoryData = await Food.findAll().catch((err) => {
+  const categoryData = await Category.findAll({
+    // include: [
+    //   {
+    //     model: Food,
+    //   },
+    // ],
+  }).catch((err) => {
     res.json(err);
   });
   // console.log(categoryData);
-  const foods = categoryData.map((dish) => dish.get({ plain: true }));
+  const foods = categoryData.map((dish_category) =>
+    dish_category.get({ plain: true })
+  );
   res.render("homepage", { foods });
 });
 
