@@ -42,6 +42,10 @@ sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Now listening on ${PORT}...`));
 });
 
+router.get("/", async (req, res) => {
+  res.render('homepage');
+});
+
 router.get("/login", async (req, res) => {
   res.render('login');
 });
