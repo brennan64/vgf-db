@@ -1,5 +1,4 @@
 const { Food } = require("../models");
-const { DataTypes } = require("sequelize");
 
 const foodData = [
   {
@@ -372,15 +371,6 @@ const foodData = [
     dish_type: "",
     dish_name: "Chateau d'Adam Chevalier Pinot Blanc Reserve",
   },
-  // {
-  //   category_id: {
-  //     type: DataTypes.INTEGER,
-  //     references: {
-  //       model: "category",
-  //       key: "id",
-  //     },
-  //   },
-  // },
 ];
 
 const foodSeed = () => Food.bulkCreate(foodData);
