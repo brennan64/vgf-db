@@ -28,10 +28,10 @@ Login.init(
       },
     },
     hashedPassword: {
-      type: DataTypes.STRING(64),
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        is: /^[0-9a-f]{64}$/i,
+        //is: /^[0-9a-z]$/i,
         len: [3, 15],
       },
     }
