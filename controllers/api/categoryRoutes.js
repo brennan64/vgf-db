@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { Category, Food } = require("../../models");
 
-// GET all foods
+// GET all categories
 router.get("/", async (req, res) => {
   const categoryData = await Category.findAll({
     // include: [
@@ -19,6 +19,7 @@ router.get("/", async (req, res) => {
   res.render("homepage", { foods });
 });
 
+//create new category
 router.post("/", async (req, res) => {
   try {
     const categoryData = await Category.create({
@@ -26,6 +27,18 @@ router.post("/", async (req, res) => {
       dish_cateogry: req.body.dish_cateogry,
     });
     res.status(200).json(categoryData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+//update
+router.put("/categories/:id", async (req, res) => {
+  try {
+    const updatedCategory = await Category.update(req.body.dish_category, {
+      where: { id },
+    });
+    res.status(200).json(updatedCategory);
   } catch (err) {
     res.status(400).json(err);
   }

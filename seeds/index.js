@@ -1,9 +1,7 @@
 const seedCategories = require("./category-seeds.js");
 const foodSeed = require("./Food-Seeds");
-// const seedTags = require('./tag-seeds');
-// const seedProductTags = require('./product-tag-seeds');
 
-const sequelize = require("../config/connections");
+const sequelize = require('../config/connections');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
