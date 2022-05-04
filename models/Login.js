@@ -4,7 +4,7 @@ const sequelize = require('../config/connections');
 
 class Login extends Model { 
   checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.hashedPassword);
+    return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
@@ -20,34 +20,34 @@ Login.init(
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
-      validate: {
-        len: [3, 15],
-      },
+      // validate: {
+      //   len: [3, 15],
+      // },
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
-      validate: {
-        isEmail: true,
-      },
+      // validate: {
+      //   isEmail: true,
+      // },
     },
-    hashedPassword: {
+    password: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [3, 15],
-      },
+      // validate: {
+      //   len: [3, 15],
+      // },
     }
   },
   {
     hooks: {
       beforeCreate: async (newUserData) => {
-        newUserData.hashedPassword = await bcrypt.hash(newUserData.hashedPassword, 25);
+        newUserData.password = await bcrypt.hash(newUserData.password, 25);
         return newUserData;
       },
       beforeUpdate: async (updatedUserData) => {
-        updatedUserData.hashedPassword = await bcrypt.hash(updatedUserData.hashedPassword, 25);
+        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 25);
         return updatedUserData;
       },
     },

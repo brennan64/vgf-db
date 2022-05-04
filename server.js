@@ -32,7 +32,7 @@ app.set("view engine", "handlebars");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(__dirname + './public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -40,16 +40,4 @@ app.use(router);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Now listening on ${PORT}...`));
-});
-
-router.get("/", async (req, res) => {
-  res.render('homepage');
-});
-
-router.get("/login", async (req, res) => {
-  res.render('login');
-});
-
-router.get("/signup", async (req, res) => {
-  res.render('signup');
 });
