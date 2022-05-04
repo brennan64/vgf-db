@@ -5,8 +5,6 @@ const exphbs = require("express-handlebars");
 const sequelize = require("./config/connections");
 const router = require("./controllers");
 
-
-
 const PORT = process.env.PORT || 3001;
 
 const app = express();
