@@ -1,9 +1,8 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connections');
-const Login = require('./Login');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connections");
+const Login = require("./Login");
 
-
-class Food extends Model { }
+class Food extends Model {}
 
 Food.init(
   {
@@ -16,7 +15,6 @@ Food.init(
     dish_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
       validate: {
         len: [3, 35],
         isAlpha: true,
@@ -33,12 +31,12 @@ Food.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-          isAlpha: true,
-          references: {
-            model: 'category',
-            key: 'id',
-          },
-          onDelete: 'CASCADE'
+        isAlpha: true,
+        references: {
+          model: "category",
+          key: "id",
+        },
+        onDelete: "CASCADE",
       },
     },
   },
@@ -47,9 +45,8 @@ Food.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'food',
+    modelName: "food",
   }
 );
 
 module.exports = Food;
-
