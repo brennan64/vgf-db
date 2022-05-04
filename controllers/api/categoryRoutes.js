@@ -22,6 +22,7 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     const categoryData = await Category.create({
+      ...req.body,
       dish_cateogry: req.body.dish_cateogry,
     });
     res.status(200).json(categoryData);

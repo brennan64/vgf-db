@@ -4,42 +4,42 @@ const categoryData = [
   {
     dish_category: "Solid",
   },
-  // {
-  //   category_name: "Savory",
-  // },
-  // {
-  //   category_name: "Drink",
-  // },
-  // {
-  //   category_name: "Milk",
-  // },
-  // {
-  //   category_name: "Soup",
-  // },
-  // {
-  //   category_name: "Tea",
-  // },
-  // {
-  //   category_name: "Sweet",
-  // },
-  // {
-  //   category_name: "Sour",
-  // },
-  // {
-  //   category_name: "Spicy",
-  // },
-  // {
-  //   category_name: "Lie",
-  // },
-  // {
-  //   category_name: "Wine",
-  // },
-  // {
-  //   category_name: "Beer",
-  // },
-  // {
-  //   category_name: "Liquor",
-  // },
+  {
+    dish_category: "Savory",
+  },
+  {
+    dish_category: "Drink",
+  },
+  {
+    dish_category: "Milk",
+  },
+  {
+    dish_category: "Soup",
+  },
+  {
+    dish_category: "Tea",
+  },
+  {
+    dish_category: "Sweet",
+  },
+  {
+    dish_category: "Sour",
+  },
+  {
+    dish_category: "Spicy",
+  },
+  {
+    dish_category: "Lie",
+  },
+  {
+    dish_category: "Wine",
+  },
+  {
+    dish_category: "Beer",
+  },
+  {
+    dish_category: "Liquor",
+  },
 ];
 
 const seedCategories = () => Category.bulkCreate(categoryData);
