@@ -1,9 +1,8 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connections');
-const Login = require('./Login');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connections");
+const Login = require("./Login");
 
-
-class Category extends Model { }
+class Category extends Model {}
 
 Category.init(
   {
@@ -27,9 +26,8 @@ Category.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'category',
+    modelName: "category",
   }
 );
 
 module.exports = Category;
-
