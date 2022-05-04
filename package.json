@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "seed": "node seeds/index.js"
+    "seed": "node seeds/index.js",
+    "server": "nodemon server.js"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -11,5 +12,8 @@
     "express-session": "^1.17.2",
     "mysql2": "^2.3.3",
     "sequelize": "^6.19.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 }
