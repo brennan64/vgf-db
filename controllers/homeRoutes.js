@@ -1,10 +1,26 @@
 const router = require("express").Router();
 
+router.get("/myprofile", async (req, res) => {
+  res.render("profile");
+});
+
+router.get("/makepost", async (req, res) => {
+  res.render("makepost");
+});
+
+router.get("/categories", async (req, res) => {
+  res.render("categories");
+});
+
+router.get("/landing", async (req, res) => {
+  res.render("landing");
+});
+
 router.get("/food", async (req, res) => {
   res.render("food");
 });
 
-router.get("/home", async (req, res) => {
+router.get("/", async (req, res) => {
   res.render("homepage");
 });
 
