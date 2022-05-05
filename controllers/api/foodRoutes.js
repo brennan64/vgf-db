@@ -8,7 +8,11 @@ router.get("/", async (req, res) => {
     res.json(err);
   });
   console.log(foodData);
+<<<<<<< HEAD
   const foods = foodData.map((dish_name) => dish_name.get({ plain: true }));
+=======
+  const foods = foodData.map((dish) => dish.get({ plain: true }));
+>>>>>>> main
   res.render("food", { foods });
 });
 

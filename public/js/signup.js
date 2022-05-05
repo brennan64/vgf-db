@@ -16,13 +16,12 @@ const signupFormHandler = async function (event) {
   });
 
   if (response.ok) {
-    //document.location.replace('/');
-    alert("signed up");
+    document.location.replace("/login");
   } else {
     alert("Failed to signup");
   }
 };
 
 document
-  .querySelector(".signup-form")
+  .querySelector("#signup-form")
   .addEventListener("submit", signupFormHandler);
