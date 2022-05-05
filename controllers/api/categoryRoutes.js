@@ -12,11 +12,11 @@ router.get("/", async (req, res) => {
   }).catch((err) => {
     res.json(err);
   });
-  // console.log(categoryData);
+  console.log(categoryData);
   const categories = categoryData.map((dish_category) =>
     dish_category.get({ plain: true })
   );
-  res.render("categoryContent", { categories });
+  res.render("categories", { categories });
 });
 
 //create new category
@@ -33,7 +33,7 @@ router.post("/", async (req, res) => {
 });
 
 //update
-router.put("/categories/:id", async (req, res) => {
+router.put("/:id", async (req, res) => {
   try {
     const updatedCategory = await Category.update(req.body.dish_category, {
       where: { id },
