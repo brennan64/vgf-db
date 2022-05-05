@@ -1,12 +1,34 @@
 const gameAdd = document.getElementById('gameAdd');
 const dishAdd = document.getElementById('dishAdd');
 const categoryAdd = document.getElementById('categoryAdd');
+const input = []
 
-document.querySelector('#addPageSubmit').addEventListener('submit', function() {
-    preventDefault();
-    if () {
-        
-    } else {
-        
-    }
-  });
+// document.querySelector('#addPageSubmit').addEventListener('submit', function() {
+//     preventDefault()
+//     input = []
+//     push(gameAdd, dishAdd, categoryAdd); {
+
+//     var userWants = {
+//         gameAdd  : gameAdd,
+//         dishAdd  : dishAdd,
+//         categoryAdd : categoryAdd,
+//     }
+
+//     if (content !== null) userWants.content = content;
+
+//     input.push(userWants);
+// }
+// })
+
+
+// var user_inputs = document.querySelector("#addPageSubmit").addEventListener('submit',function() {
+//     var inputs = [];
+//     for(var i=0; i<user_inputs.length; i++) {
+//         inputInfo.push(user_inputs[i].value);
+//     }
+//     var inputInfo = inputs.join(', ')})
+//     console.log(inputInfo);
+
+//     inputs.push(inputInfo(0)) (queryfunction food column is)
+//     inputs.push(inputInfo(1)) (queryfunction dish name column)
+//     inputs.push(inputInfo(2)) (queryfunction category info column)
