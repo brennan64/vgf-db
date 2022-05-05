@@ -3,6 +3,9 @@ const dishAdd = document.getElementById('dishAdd');
 const categoryAdd = document.getElementById('categoryAdd');
 const input = []
 
+
+//OPTION 1 -- I believe this is the more valid version / more likely to work.
+
 // document.querySelector('#addPageSubmit').addEventListener('submit', function() {
 //     preventDefault()
 //     input = []
@@ -20,6 +23,11 @@ const input = []
 // }
 // })
 
+// input [0] send to game name
+// input [1] send to dish name
+// input [2] send to category
+
+//option 2 -- less likely to work, syntax wrong but might still be an option?
 
 // var user_inputs = document.querySelector("#addPageSubmit").addEventListener('submit',function() {
 //     var inputs = [];
