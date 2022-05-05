@@ -2,8 +2,10 @@
 <div class="food-content">
     <h1>Food</h1>
     <div>
-        <ul>
-            <li></li>
-        </ul>
+  <ul>
+    {{#each food as |food|}}
+      <li>{{food.dish}}</li>
+    {{/each}}
+  </ul>
     </div>
 </div>
