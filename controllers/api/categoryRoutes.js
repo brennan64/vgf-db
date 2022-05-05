@@ -13,10 +13,10 @@ router.get("/", async (req, res) => {
     res.json(err);
   });
   // console.log(categoryData);
-  const foods = categoryData.map((dish_category) =>
+  const categories = categoryData.map((dish_category) =>
     dish_category.get({ plain: true })
   );
-  res.render("homepage", { foods });
+  res.render("homepage", { categories });
 });
 
 //create new category
