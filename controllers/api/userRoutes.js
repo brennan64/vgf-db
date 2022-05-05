@@ -1,10 +1,10 @@
 const router = require("express").Router();
-const { Login } = require("../../models");
+const { User } = require("../../models");
 
 router.post("/", async (req, res) => {
   console.log('hello');
   try {
-    const userData = await Login.create({
+    const userData = await User.create({
       username: req.body.username,
       email: req.body.email,
       password: req.body.password
@@ -33,7 +33,7 @@ router.post("/", async (req, res) => {
 // });
 router.post("/login", async (req, res) => {
   try {
-    const userData = await Login.findOne({ where: { username: req.body.username } });
+    const userData = await User.findOne({ where: { username: req.body.username } });
 
     if (!userData) {
       res
