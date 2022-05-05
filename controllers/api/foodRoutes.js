@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
   });
   console.log(foodData);
   const foods = foodData.map((dish) => dish.get({ plain: true }));
-  res.render("homepage", { foods });
+  res.render("food", { foods });
 });
 
 router.post("/", async (req, res) => {
