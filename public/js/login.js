@@ -16,13 +16,13 @@ const loginFormHandler = async (event) => {
   });
 
   if (response.ok) {
-    // If successful, redirect the browser to the profile page
-    document.location.redirect('/categories');
+    // If successful, redirect the browser to the homepage
+    document.location.replace("/food");
   } else {
-    alert(response.statusText);
+    alert("Failed to Log");
   }
 };
 
 document
   .querySelector("#login-form")
-  .addEventListener("submit", loginFormHandler());
+  .addEventListener("submit", loginFormHandler);
