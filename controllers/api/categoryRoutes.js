@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
   const categories = categoryData.map((dish_category) =>
     dish_category.get({ plain: true })
   );
-  res.render("homepage", { categories });
+  res.render("categoryContent", { categories });
 });
 
 //create new category
@@ -24,7 +24,7 @@ router.post("/", async (req, res) => {
   try {
     const categoryData = await Category.create({
       ...req.body,
-      dish_cateogry: req.body.dish_cateogry,
+      dish_category: req.body.dish_category,
     });
     res.status(200).json(categoryData);
   } catch (err) {
