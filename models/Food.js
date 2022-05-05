@@ -22,21 +22,22 @@ Food.init(
     dish_game: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isAlphanumeric: true,
-      },
+      // validate: {
+      //   isAlphanumeric: true,
+      // },
     },
     dish_type: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         isAlpha: true,
-        references: {
-          model: "category",
-          key: "id",
-        },
-        onDelete: "CASCADE",
       },
+      references: {
+        model: "category",
+        key: "category_name",
+      },
+
+      onDelete: "CASCADE",
     },
   },
   {
