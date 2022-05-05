@@ -1,23 +1,29 @@
-  <div class="col-md-6">
+<div class="col-md-6">
     <h2>Signup</h2>
-
-    <form class="form card-body" id="signup-form">
-      <div class="form-group">
-        <label for="username-signup">Username:</label>
-        <input class="form-input" type="text" id="username-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">Email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">Password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit" id="signup-btn">Signup</button>
-      </div>
-    </form>
-  </div>
+    <div>
+        <form class="form signup-form">
+            <div class="form-group">
+                <label for="name-signup">Username:</label><br>
+                <input class="form-input" type="text" id="name-signup" />
+            </div>
+            <div class="form-group">
+                <label for="email-signup">Email:</label><br>
+                <input class="form-input" type="text" id="email-signup" />
+            </div>
+            <div class="form-group">
+                <label for="password-signup">Password:</label><br>
+                <input class="form-input" type="password" id="password-signup" />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Signup</button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <p>Already a user? <button>Click here to sign in!
+                <!-- make link to sign in -->
+            </button></p>
+    </div>
+</div>
 
 <script src="/js/signup.js"></script>

@@ -1,19 +1,24 @@
 <div class="col-md-6">
-  <h2>Login</h2>
+    <h2>Login</h2>
 
-  <form class="form" id="login-form">
-    <div class="form-group">
-      <label for="username-login">Username:</label>
-      <input class="form-input" type="text" id="username-login" />
+    <form class="form login-form">
+        <div class="form-group">
+            <label for="username-login">Username:</label><br>
+            <input class="form-input" type="text" id="username-login" />
+        </div>
+        <div class="form-group">
+            <label for="password-login">Password:</label><br>
+            <input class="form-input" type="password" id="password-login" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Login</button>
+        </div>
+    </form>
+    <div>
+        <p>Not a user? <button>
+                <!-- make link to sign up-->Sign up now!
+            </button></p>
     </div>
-    <div class="form-group">
-      <label for="password-login">Password:</label>
-      <input class="form-input" type="password" id="password-login" />
-    </div>
-    <div class="form-group">
-      <button class="btn btn-primary" type="submit">Login</button>
-    </div>
-  </form>
 </div>
 
 <script src="/js/login.js"></script>
