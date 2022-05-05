@@ -18,15 +18,6 @@ router.post("/", async (req, res) => {
     res.status(400).json(err);
   }
 });
-// router.post('/', (req, res) => {
-//   Login.create({
-//       username: req.body.username,
-//       email: req.body.email,
-//       password: req.body.password
-//   }).then(res => {
-//     console.log(res);
-//   });
-// });
 router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({
