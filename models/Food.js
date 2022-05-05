@@ -31,12 +31,13 @@ Food.init(
       allowNull: false,
       validate: {
         isAlpha: true,
-        references: {
-          model: "category",
-          key: "id",
-        },
-        // onDelete: "CASCADE",
       },
+      references: {
+        model: "category",
+        key: "category_name",
+      },
+
+      onDelete: "CASCADE",
     },
   },
   {
