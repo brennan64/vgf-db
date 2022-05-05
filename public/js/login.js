@@ -17,7 +17,7 @@ const loginFormHandler = async (event) => {
 
   if (response.ok) {
     // If successful, redirect the browser to the homepage
-    document.location.replace("/food");
+    document.location.replace("/landing");
   } else {
     alert("Failed to Log");
   }
