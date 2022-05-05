@@ -1,4 +1,4 @@
-const Login = require("./User");
+const User = require("./User");
 const Food = require("./Food");
 const Category = require("./Category");
 
@@ -11,4 +11,4 @@ Food.belongsTo(Category, {
   onDelete: "CASCADE",
 });
 
-module.exports = { Login, Food, Category };
+module.exports = { User, Food, Category };
