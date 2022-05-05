@@ -38,6 +38,7 @@ router.put("/:id", async (req, res) => {
     const updatedCategory = await Category.update(req.body.dish_category, {
       where: { id },
     });
+    console.log(updatedCategory);
     res.status(200).json(updatedCategory);
   } catch (err) {
     res.status(400).json(err);

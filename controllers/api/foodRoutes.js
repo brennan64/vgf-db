@@ -1,15 +1,15 @@
 const router = require("express").Router();
 const res = require("express/lib/response");
-const Food = require("../../models/Food");
+const { Food } = require("../../models");
 
 // GET all foods
 router.get("/", async (req, res) => {
-  const foodData = await Food.findAll().catch((err) => {
+  const foodData = await Food.findAll({}).catch((err) => {
     res.json(err);
   });
   console.log(foodData);
-  const foods = foodData.map((dish) => dish.get({ plain: true }));
-  res.render("homepage", { foods });
+  const foods = foodData.map((dish_name) => dish_name.get({ plain: true }));
+  res.render("food", { foods });
 });
 
 router.post("/", async (req, res) => {
