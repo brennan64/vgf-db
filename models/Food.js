@@ -22,9 +22,9 @@ Food.init(
     dish_game: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isAlphanumeric: true,
-      },
+      // validate: {
+      //   isAlphanumeric: true,
+      // },
     },
     dish_type: {
       type: DataTypes.STRING,
@@ -35,7 +35,7 @@ Food.init(
           model: "category",
           key: "id",
         },
-        onDelete: "CASCADE",
+        // onDelete: "CASCADE",
       },
     },
   },
