@@ -8,7 +8,6 @@ Category.hasMany(Food, {
 
 Food.belongsTo(Category, {
   foreignKey: "category_id",
-  onDelete: "CASCADE",
 });
 
 module.exports = { User, Food, Category };
