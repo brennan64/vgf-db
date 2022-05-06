@@ -34,7 +34,7 @@ Food.init(
       },
       references: {
         model: "category",
-        key: "dish_category",
+        key: "category_name",
       },
 
       onDelete: "CASCADE",

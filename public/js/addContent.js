@@ -1,18 +1,18 @@
 const addPageSubmit = async function (event) {
   event.preventDefault();
 
-  const gameAdd = document.getElementById('#gamename-input');
-  const dishAdd = document.getElementById('#foodcategory-input');
-  const categoryAdd = document.getElementById('#dish-input');
+  const gameAddEl = document.querySelector('#gamename-input');
+  const dishAddEl = document.querySelector('#foodcategory-input');
+  const categoryAddEl = document.querySelector('#dish-input');
 
   const input = [];
 
     const response = await fetch("/food", {
       method: "POST",
       body: JSON.stringify({
-        dish_name: gameAdd.value,
-        dish_game: dishAdd.value,
-        dish_type: categoryAdd.value,
+        dish_name: gameAddEl.value,
+        dish_game: dishAddEl.value,
+        dish_type: categoryAddEl.value,
       }),
       headers: { "Content-Type": "application/json" },
     });
