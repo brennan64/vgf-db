@@ -8,7 +8,7 @@ const categoryAdd = document.getElementById('categoryAdd');
 const addPageSubmit = async function (event) {
     event.preventDefault();
   
-    const response = await fetch("/api/foodRoutes/", {
+    const response = await fetch("/food", {
       method: "POST",
       body: JSON.stringify({
         dishName: dishAdd.value,
@@ -20,6 +20,7 @@ const addPageSubmit = async function (event) {
   
     if (response.ok) {
       document.location.replace("/food");
+      alert('Added to the list!')
     } else {
       alert("Failed to post");
     }
