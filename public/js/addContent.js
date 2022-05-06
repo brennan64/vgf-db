@@ -1,34 +1,33 @@
-const req = require("express/lib/request");
-
-const gameAdd = document.getElementById('gameAdd');
-const dishAdd = document.getElementById('dishAdd');
-const categoryAdd = document.getElementById('categoryAdd');
-// const input = []
-
 const addPageSubmit = async function (event) {
-    event.preventDefault();
-  
+  event.preventDefault();
+
+  const gameAdd = document.getElementById('#gamename-input');
+  const dishAdd = document.getElementById('#foodcategory-input');
+  const categoryAdd = document.getElementById('#dish-input');
+
+  const input = [];
+
     const response = await fetch("/food", {
       method: "POST",
       body: JSON.stringify({
-        dishName: dishAdd.value,
-        gameName: gameAdd.value,
-        categoryType: categoryAdd.value,
+        dish_name: gameAdd.value,
+        dish_game: dishAdd.value,
+        dish_type: categoryAdd.value,
       }),
       headers: { "Content-Type": "application/json" },
     });
-  
-    if (response.ok) {
-      document.location.replace("/food");
-      alert('Added to the list!')
-    } else {
-      alert("Failed to post");
-    }
-  };
-  
-  document
-    .querySelector("#createbox")
-    .addEventListener("submit", addPageSubmit);
+    
+  if (response.ok) {
+    document.location.replace("/food");
+    alert('Added to the list!')
+  } else {
+    alert("Failed to post");
+  }
+};
+
+document
+  .querySelector("#addfood-form")
+  .addEventListener("submit", addPageSubmit);
 
 // router.post("/", async (req, res) => {
 //     try {
