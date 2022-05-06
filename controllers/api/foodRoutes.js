@@ -21,6 +21,7 @@ router.post("/", async (req, res) => {
       dish_type: req.body.dish_type,
     });
     console.log(foodData);
+
     res.status(200).json(foodData);
   } catch (err) {
     res.status(400).json(err);
