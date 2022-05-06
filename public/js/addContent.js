@@ -1,8 +1,48 @@
+const req = require("express/lib/request");
+
 const gameAdd = document.getElementById('gameAdd');
 const dishAdd = document.getElementById('dishAdd');
 const categoryAdd = document.getElementById('categoryAdd');
-const input = []
+// const input = []
 
+const addPageSubmit = async function (event) {
+    event.preventDefault();
+  
+    const response = await fetch("/api/foodRoutes/", {
+      method: "POST",
+      body: JSON.stringify({
+        dishName: dishAdd.value,
+        gameName: gameAdd.value,
+        categoryType: categoryAdd.value,
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
+  
+    if (response.ok) {
+      document.location.replace("/food");
+    } else {
+      alert("Failed to post");
+    }
+  };
+  
+  document
+    .querySelector("#createbox")
+    .addEventListener("submit", addPageSubmit);
+
+// router.post("/", async (req, res) => {
+//     try {
+//       const foodData = await Food.create({
+//         ...req.body,
+//         dish_name: req.body.dish_name,
+//         dish_game: req.body.dish_game,
+//         dish_type: req.body.dish_type,
+//       });
+//       console.log(foodData);
+//       res.status(200).json(foodData);
+//     } catch (err) {
+//       res.status(400).json(err);
+//     }
+//   });
 
 //OPTION 1 -- I believe this is the more valid version / more likely to work.
 
