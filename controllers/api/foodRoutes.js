@@ -8,8 +8,8 @@ router.get("/", async (req, res) => {
     res.json(err);
   });
   console.log(foodData);
-  const foods = foodData.map((dish_name) => dish_name.get({ plain: true }));
-  res.render("food", { foods });
+  const food = foodData.map((dish_name) => dish_name.get({ plain: true }));
+  res.render("food", { food });
 });
 //create new food
 router.post("/makepost", async (req, res) => {
@@ -21,6 +21,7 @@ router.post("/makepost", async (req, res) => {
       dish_type: req.body.dish_type,
     });
     console.log(foodData);
+
     res.status(200).json(foodData);
   } catch (err) {
     res.status(400).json(err);
