@@ -6,8 +6,10 @@
   <div>
     
     <ul>
-      {{#each foods as |food|}}
+      {{#each food as |food|}}
         <li>{{food.dish_name}}</li>
+        <li>{{food.dish_game}}</li>
+        <li>{{food.dish_type}}</li>
       {{/each}}
     </ul>
   </div>
