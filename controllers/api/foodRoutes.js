@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
   res.render("food", { food });
 });
 //create new food
-router.post("/makepost", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const foodData = await Food.create({
       ...req.body,
