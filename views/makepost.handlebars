@@ -1,25 +1,49 @@
-   {{> navbar }}
+{{> navbar }}
 
-    <!-- Add Content -->
-    <div id="createbox">
-        <h1>Something we're missing? Make sure to add it here!</h1>
-        <div>
-            <h2>Add Game</h2>
-            <div>
-                <input type="text" placeholder="Name of the game" id="gameAdd">
+<!-- Add Content -->
+<div class="col-md-6">
+    <h1>Something we're missing? Make sure to add it here!</h1>
+    <div>
+        <form class="form " id="addfood-form">
+            <div class="form-group">
+                <label for="gamename-input">Add Game</label>
+                <input class="form-input" type="text" id="gamename-input" />
             </div>
-        </div>
-        <div>
-            <h2>Add Food Category</h2>
-            <div>
-                <input type="text" placeholder="Type of food?" id="categoryAdd">
+            <div class="form-group">
+                <label for="foodcategory-input">Add Food Category</label>
+                <input class="form-input" type="text" id="foodcategory-input" />
             </div>
-        </div>
-        <div>
-            <h2>Add A Dish</h2>
-            <div>
-                <input type="text" placeholder="What is the name of the dish?" id="dishAdd">
+            <div class="form-group">
+                <label for="dish-input">Add Dish</label>
+                <input class="form-input" type="text" id="dish-input" />
             </div>
-        </div>
-        <button type="submit" id="addPageSubmit">Submit</button>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </form>
     </div>
+</div>
+
+<script src="/js/addContent.js"></script>
+{{!-- <div id="createbox">
+    <h1>Something we're missing? Make sure to add it here!</h1>
+    <div>
+        <h2>Add Game</h2>
+        <div>
+            <input type="text" placeholder="Name of the game" id="gameAdd">
+        </div>
+    </div>
+    <div>
+        <h2>Add Food Category</h2>
+        <div>
+            <input type="text" placeholder="Type of food?" id="categoryAdd">
+        </div>
+    </div>
+    <div>
+        <h2>Add A Dish</h2>
+        <div>
+            <input type="text" placeholder="What is the name of the dish?" id="dishAdd">
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+</div> --}}
